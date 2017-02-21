@@ -1,0 +1,89 @@
+/*JavaScript Basics*/
+
+*{
+ margin: 0px;
+ padding: 0px;
+ color: #c2d7eb;
+ }
+h1{
+  margin: 10px;
+}
+h2{
+  margin: 10px;
+  font-size: 18px;
+}
+p{
+  font-size: 10px;
+}
+ul, li, p{
+   margin: 8px;
+   font-size: 11.5px;
+ }
+ span.item{
+   color: #69dcd8;
+   text-decoration: underline;
+ }
+ span.highlight{
+   color: #808eff;
+ }
+#wrapper{
+ width: 970px;
+ background-color: #1b335d;
+ margin: 0px auto;
+ padding: 5px;
+}
+#header{
+ height: 60px;
+ width: 930px;
+ border-radius: 15px;
+ background-color: #cf2f36;
+ font-size: 15px;
+ display: block;
+ padding: 10px;
+ margin: 10px;
+}
+#nav{
+ height: 210px;
+ width: 200px;
+ border-radius: 25px;
+ background-color: #297d8c;
+ color: #c2d7eb;
+ display: inline-block;
+ vertical-align: top;
+ line-height: 6px;
+ padding: 10px 0px 10px 0px;
+ margin: 10px 0px 10px 10px;
+}
+  li.l1{
+    color: #69dcd8;
+    text-decoration: underline;
+    list-style-type: none;
+  }
+  li.l2{
+    color: #69dcd8;
+    text-decoration: underline;
+    list-style-type: disc;
+  }
+  li.l3{
+    color: #69dcd8;
+    text-decoration: underline;
+    list-style-type: circle;
+  }
+#main{
+ height: 400px;
+ width: 700px;
+ border-radius: 20px;
+ background-color: #0e1822;
+ display: inline-block;
+ padding: 15px;
+ margin: 5px 5px 5px 15px;
+}
+#footer{
+ height: 35px;
+ width: 950px;
+ border-radius: 15px;
+ background-color: #5d6673;
+ display: block;
+ padding: 5px;
+ margin: 5px;
+}
