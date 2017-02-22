@@ -1,0 +1,190 @@
+/*CSS reset settings here
+
+Plotting Your Blocks
+Adjust the CSS code, use margins and paddings to adjust the spaces between divisions,
+use the display property to be able to put each block in its proper place.*/
+
+*{
+ margin: 0px;
+ padding: 0px;
+}
+h1{
+  margin-left: 8px;
+  font-family: Comic Sans MS;
+  color: #000000;
+  font-size: 20px;
+}
+h2{
+  margin-left: 8px;
+  font-family: Arial;
+  color: #f7f7f7;
+  font-size: 18px;
+}
+a, p{
+  margin-left: 8px;
+  margin-top: 7px;
+  font-family: Arial;
+  font-size: 15px;
+}
+#wrapper{
+ width: 970px;
+ background: linear-gradient(-180deg, #221116, #bbaab2, #221116);
+ margin: 0px auto;
+}
+#header{
+  height: 45px;
+  width: 970px;
+  background-color: #f7f7f7;
+  display: inline-block;
+  padding-top: 10px;
+}
+  .name{
+    font-size: 28px;
+    margin-left: 15px;
+  }
+  .master{
+    font-family: Arial;
+    font-size: 18px;
+    margin-left: 450px;
+  }
+#top{
+  height: 250px;
+  width: 940px;
+  display: inline-block;
+  margin: 25px;
+}
+  .topImage{
+    height: 244px;
+    width: 374px;
+    border: 3px solid silver;
+    /*background-color: red;*/
+    display: inline-block;
+    vertical-align: top;
+    /*padding-right: 0px;*/
+    margin-right: 20px;
+    /*padding: 15px;*/
+    /*margin: 5px 5px 5px 15px;*/
+  }
+  .topTitle{
+    height: 30px;
+    width: 497px;
+    padding-top: 8px;
+    /*border: 1px solid black;*/
+    background: linear-gradient(#b0afb4, #8f8d99, #b0afb4);
+    /*background-color: #8f8d99;*/
+    display: inline-block;
+    /*padding: 5px;*/
+    /*margin: 5px;*/
+  }
+  .topAbout{
+    height: 250px;
+    width: 497px;
+    background: linear-gradient(120deg, #ffffff, #d5c3d5);
+    display: inline-block;
+  }
+#mainTitle{
+  height: 40px;
+  width: 970px;
+  /*background-color: #f7f7f7;*/
+  display: inline-block;
+  /*padding: 15px;*/
+  /*margin: 5px 5px 5px 15px;*/
+}
+#techTitle{
+  height: 40px;
+  width: 970px;
+  /*background-color: #f7f7f7;*/
+  display: inline-block;
+  /*padding: 15px;*/
+  /*margin: 5px 5px 5px 15px;*/
+}
+  .title{
+    height: 40px;
+    width: 280px;
+    padding-top: 10px;
+    background: linear-gradient(#b0afb4, #8f8d99, #b0afb4);
+    display: inline-block;
+    margin: 0px 0px 0px 25px;
+  }
+#main{
+ height: 360px;
+ width: 970px;
+ display: inline-block;
+ /*padding: 15px;*/
+ /*margin: 5px 5px 5px 15px;*/
+}
+#main h2{
+  color: white;
+}
+.image{
+  height: 140px;
+  width: 280px;
+  /*border: 1px solid black;*/
+  background-color: green;
+  display: inline-block;
+  /*padding: 5px;*/
+  /*margin: 0px 0px 0px 25px;*/
+}
+.content{
+  height:100px;
+  width: 280px;
+  border: 1px solid black;
+  background: linear-gradient(120deg, #ffffff, #d5c3d5);
+  display: inline-block;
+  margin: 0px 0px 0px 25px;
+}
+.subMain{
+  height: 360px;
+  width: 280px;
+  vertical-align: top;
+  background: linear-gradient(120deg, #ffffff, #d5c3d5);
+  display: inline-block;
+  margin: 0px 0px 0px 25px;
+}
+#tech{
+ height: 280px;
+ width: 970px;
+ display: inline-block;
+ /*padding: 15px;*/
+ /*margin: 5px 5px 5px 15px;*/
+}
+  .subTech{
+    height: 240px;
+    width: 280px;
+    vertical-align: top;
+    background: linear-gradient(120deg, #ffffff, #d5c3d5);
+    display: inline-block;
+    margin: 0px 0px 0px 25px;
+  }
+  .techImage{
+    height: 60px;
+    width: 270px;
+    display: inline-block;
+    padding: 15px 0px 0px 20px;
+  }
+  .button {
+    background-color: #407d61;
+    border: 1px solid black;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px #888888;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 55px;
+    cursor: pointer;
+  }
+#footer{
+  height: 65px;
+  width: 970px;
+  text-align: center;
+  background-color: #f7f7f7;
+  display: inline-block;
+  line-height: 20px;
+}
+  .footStyle{
+    font-style: italic;
+    vertical-align: middle;
+  }
