@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Basics Functions</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="jqFunctions.css">
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+      $(document).ready(function(){
+      //  --> Animation Effects
+      // // With the element initially shown, we can hide it slowly:
+      // .hide()
+      $("#selector").click(function(){
+      $("#selector").hide("slow",function(){
+        alert("Hide Complete");
+        });
+      });
+      // .show()
+      $("selector").click(function() {
+        $("#group2").show("slow");
+      });
+      // .toggle()
+      $( "selector" ).click(function() {
+        $( "#book" ).toggle( "slow", function() {
+        });
+      });
+      // .slideDown()
+      // $( document.body ).click(function () {
+      //   if($("div:first" ).is( ":hidden" ) ) {
+      //     $( "div" ).slideDown( "slow" );
+      //   } else {
+      //     $( "div" ).hide();
+      //   }
+      // });
+      // .slideToggle()
+      // $( "#aa" ).click(function() {
+      //   $( "div:not(.still)" ).slideToggle( "slow", function() {
+      //     var n = parseInt( $( "span" ).text(), 10 );
+      //     $( "span" ).text( n + 1 );
+      //   });
+      // });
+      // .slideUp()
+      // $( "button" ).click(function() {
+      //   $( this ).parent().slideUp( "slow", function() {
+      //     $( "#msg" ).text( $( "button", this ).text() + " has completed." );
+      //   });
+      // });
+      // .fadeOut()
+      // $("selector").click(function() {
+      //   function complete() {
+      //     $( "<div>" ).text( this.id ).appendTo( "#log" );
+      //   }
+      //   $( "#box1" ).fadeOut( 1600, "linear", complete );
+      //   $( "#box2" ).fadeOut( 1600, complete );
+      // });
+      // $("selector").click(function() {
+      //   $("div").show();
+      //   $("#log").empty();
+      // });
+      // .fadeIn()
+      // $( document.body ).click(function() {
+      //   $( "div:hidden:first" ).fadeIn( "slow" );
+      // });
+      // --> CSS (adding or removing a class for any HTML element/DOM)
+      // .addClass()
+      // $( "p" ).addClass( "myClass yourClass" );
+      // .removeClass()
+      // $( "p" ).removeClass( "myClass yourClass" )
+      // .css()
+      // $( "div" ).click(function() {
+      //   var html = [ "The clicked div has the following styles:" ];
+      //   var styleProps = $( this ).css(["width", "height", "color", "background-color"]);
+      //   $.each( styleProps, function( prop, value ) {
+      //     html.push( prop + ": " + value );
+      //   });
+      //   $( "#result" ).html( html.join( "<br>" ) );
+      // });
+      // --> Manipulation (retrieving or setting value or text in any HTML element)
+      // .after()
+      // $( ".inner" ).after( "<p>Test</p>" );
+      // .append()
+      // $( ".inner" ).append( "<p>Test</p>" );
+      // .prepend()
+      // $( ".inner" ).prepend( "<p>Test</p>" );
+      // .attr()
+      // $("input")
+      // .change(function() {
+      //   var $input = $( this );
+      //   $( "p" ).html( ".attr( 'checked' ): <b>" + $input.attr( "checked" ) + "</b><br>" + ".prop( 'checked' ): <b>" + $input.prop( "checked" ) + "</b><br>" + ".is( ':checked' ): <b>" + $input.is( ":checked" ) + "</b>" );
+      // })
+      // .before()
+      // $( ".inner" ).before( "<p>Test</p>" );
+      // .html()
+      // $( "p" ).click(function() {
+      //   var htmlString = $( this ).html();
+      //   $( this ).text( htmlString );
+      // });
+      // .text()
+      // var myText = $('#group1').text();
+      // alert(myText);
+      // .val()
+      // --> Events (functions to handle an event)
+      //.click()
+      // $('buttonA').click(function(){
+      //   $('#group1').text('Group 1 - changed by .text setter!');
+      // });
+      // $('buttonB').click(function(){
+      //   alert("You have clicked a button!");
+      // });
+      // .on()
+      // var count = 0;
+      // $( "body" ).on( "click", "p", function() {
+      //   $( this ).after( "<p>Another paragraph! " + (++count) + "</p>" );
+      // });
+      // .live() - deprecated (JQuery 1.7)
+      // $( "a" ).live( "click", function() {
+      //   return false;
+      // });
+      // .hover()
+      // $( selector ).hover( handlerIn, handlerOut )
+    }); // <- end "})" for document ready function
+    </script>
+    <body>
+      <div id="wrapper">
+        <div id=textSelect class="sectionA">
+          <h1>Working with text...</h1>
+          <button class="button"> Click me to change the paragraph! </button>
+          <div id="clickme">Click here</div>
+          <p id='group3'> This is my paragraph! </p>
+          <p id='group4'> This is my paragraph! </p>
+          <p id='group5'> This is my paragraph! </p>
+        </div>
+        <!-- PHOTOS -->
+        <div id=photoSelect class="sectionB">
+          <img id="photo1" src="./images/photo1.jpg" alt="MtStMichel" width="100" height="123">
+          <img id="photo2" src="./images/photo2.png" alt="F15" width="200" height="123">
+          <img id="photo3" src="./images/photo3.jpg" alt="Refueling" width="100" height="123">
+          <img id="photo4" src="./images/photo4.jpg" alt="B52" width="200" height="123">
+          <button id=buttonPhoto1 class="button"> Click me to change photo1! </button>
+          <div id="photoClick1">Click here</div>
+        </div>
+        <!-- -> ANIMATIONS -->
+        <h1>Groups of JSQuert Tag Effects</h1>
+        <p>Functions that do animations</p>
+        <div id="jqHide" class="sectionC">
+          <h2><a href="http://api.jquery.com/hide/">hide</a></h2>
+          <button id="buttonHide" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jqShow"class="sectionD">
+          <h2><a href="http://api.jquery.com/show/">show</a></h2>
+          <button id="buttonShow" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jqToggle" class="sectionA">
+          <h2><a href="http://api.jquery.com/toggle/">toggle</a></h2>
+          <button id="buttonToggle" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jqSlideDown" class="sectionB">
+          <h2><a href="http://api.jquery.com/slideDown/">slideDown</a></h2>
+          <button id="buttonSlideDown" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jqSlideToggle" class="sectionC">
+          <h2><a href="http://api.jquery.com/slideToggle/">slideToggle</a></h2>
+          <button id="buttonSlideToggle" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jqSlideUp" class="sectionD">
+          <h2><a href="http://api.jquery.com/slideUp/">slideUp</a></h2>
+          <button id="buttonSlideUp" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jqFadeOut" class="sectionA">
+          <h2><a href="http://api.jquery.com/fadeOut/">fadeOut</a></h2>
+          <button id="buttonFadeOut" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsFadeIn" class="sectionB">
+          <h2><a href="http://api.jquery.com/fadeIn/">fadeIn</a></h2>
+          <button id="buttonFadeIn" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <!-- -> CSS Element Manipulations -->
+        <h1>CSS (adding or removing a class for any HTML element/DOM)</h1>
+        <div id="jsAddClass" class="sectionC">
+          <h2><a href="http://api.jquery.com/addClass/">addClass</a></h2>
+          <button id="buttonAddClass" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsRemoveClass" class="sectionD">
+          <h2><a href="http://api.jquery.com/removeClass/">removeClass</a></h2>
+          <button id="buttonRemoveClass"  class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsCss" class="sectionA">
+          <h2><a href="http://api.jquery.com/css/">css</a></h2>
+          <button id="buttonCss"  class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <!-- -> HTML Element Manipulations -->
+        <h1>Manipulation (retrieving or setting value or text in any HTML element)</h1>
+        <div id="jsAfter" class="sectionA">
+          <h2><a href="http://api.jquery.com/after/">after</a></h2>
+          <button id="buttonAfter" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsAppend" class="sectionB">
+          <h2><a href="http://api.jquery.com/append/">append</a></h2>
+          <button id="buttonAppend" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsPrepend" class="sectionC">
+          <h2><a href="http://api.jquery.com/prepend/">prepend</a></h2>
+          <button id="buttonPrepend" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsAttr" class="sectionD">
+          <h2><a href="http://api.jquery.com/attr/">attr</a></h2>
+          <button id="buttonAttr" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsBefore" class="sectionA">
+          <h2><a href="http://api.jquery.com/before/">before</a></h2>
+          <button id="buttonBefore"  class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsHtml" class="sectionB">
+          <h2><a href="http://api.jquery.com/html/">html</a></h2>
+          <button id="buttonHtml" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsText" class="sectionC">
+          <h2><a href="http://api.jquery.com/text/">text</a></h2>
+          <button id="buttonText" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsVal" class=sectionD>
+          <h2><a href="http://api.jquery.com/val/">val</a></h2>
+          <button id="buttonVal" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+          <h1>Events (functions to handle an event)</h1>
+        <div id="jsClick" class="sectionA">
+          <h2><a href="http://api.jquery.com/click/">click</a></h2>
+          <button id="buttonClick" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsOn" class="sectionB">
+          <h2><a href="http://api.jquery.com/on/">on</a></h2>
+          <button id="buttonOn" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsLive" class="sectionC">
+          <h2><a href="http://api.jquery.com/live/">live</a></h2>
+          <button id="buttonLive" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+        <div id="jsHover" class="sectionD">
+          <h2><a href="http://api.jquery.com/hover/">hover</a></h2>
+          <button id="buttonHover" class="button">Action!</button>
+          <p id='group1'> First Paragraph Text for Interaction </p>
+          <p id='group2'> Paragraph Text for Interaction</p>
+          <p>Text For Custom Action</p>
+        </div>
+    </div>
+    </body>
+
+</html>

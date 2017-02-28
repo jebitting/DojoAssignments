@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+        $(document).ready(function() {
+            var myText = $('#homer').text();
+            alert(myText);
+            $('button').click(function() {
+                $('#homer').text('see how the .text() works as a setter!');
+            });
+            $('button').click(function() {
+                alert("You have clicked a button!");
+            });
+        });
+    </script>
+
+    <body>
+        <p id='homer'> This is my paragraph! </p>
+        <button> Click me to change the paragraph! </button>
+    </body>
+
+</html>
