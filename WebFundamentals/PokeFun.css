@@ -1,0 +1,15 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+#wrapper{
+  width: 970px;
+  height: auto;
+  display: inline-block;
+}
+#style {
+  width: 100px;
+  height: 100px;
+  background: grey;
+  display: inline-block;
+}

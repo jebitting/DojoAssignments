@@ -1,0 +1,10 @@
+pip list give me a list of installed packages.  Freeze and list seem to
+do essentially the same.  I made the requirements document twice 
+using freeze and list and it had the same packages listed in the file 
+with the package versions.
+
+pip show Django gave the info about the package, what it is, the website, etc
+
+pip uninstall removed the package
+
+pip search flask gave a lot of information about the modules in flask

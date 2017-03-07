@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="PokeFun.css">
+    <title>Pokemon Fun</title>
+    <body>
+      <h1>Lots of Pokemon</h1>
+      <img id="pokemon" class="style" src=>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        var pokemon = 0;
+        var chara = 0;
+        var parent = document.getElementById("images");
+        //loop to get Pokemons
+        for(var i = 1; i < 152; i++){
+          pokemon = i;
+          img= new Image();
+          img.src="http://pokeapi.co/media/img/" + pokemon + ".png";
+          parent.append(img);
+        }
+      })
+      </script>
+    </body>
+    </html>
+      </head>
+      <body>
+        <div id="container">
+          <div id="images"></div>
+        </div>
+      </body>
+    </html>
