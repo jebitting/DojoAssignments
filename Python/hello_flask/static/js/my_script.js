@@ -1,1 +1,1 @@
-// alert("hello flask!");
+alert('hello flask!')
