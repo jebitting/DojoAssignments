@@ -12,14 +12,13 @@ mysql = MySQLConnector(app, "flasksqldb")
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]*$')
 NAME_REGEX = re.compile(r'^[a-zA-Z]{2,}$')
 
-# Each route should do one thing
-# Either post information or gather information to send elsewhere
+#each route should do one thing.
+#Either post information or gather information to send elsewhere
 # The "@" symbol designates a "decorator" which attaches the
 # following function to the '/' route. This means that
 # whenever we send a request to localhost:5000/ we will run the following function
 
 @app.route('/')
-
 def hello_flask():
     if "counter" not in session:
         session['counter'] = 0

@@ -1,0 +1,9 @@
+*{
+ margin: 10px;
+ padding: 10px;
+ background-color: #36486b;
+}
+
+h1, h2, p {
+    color: #fefbd8;
+}

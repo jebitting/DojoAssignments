@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index page for Big Cats</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.css')}}">
+        <!-- <script type="text/javascript" src=" {{ url_for('static', filename='js/my_script.js') }}"></script> -->
+    </head>
+    <body>
+        <h1>Hello Kitty</h1>
+        <img src="{{ url_for('static', filename='images/jaguarkitty.jpg')}}" alt="the little cat">
+        {{ session['counter']}}
+        {% with messages = get_flashed_messages()%}
+        {{messages}}
+            {% for message in messages %}
+                    {% if message == 'Required form, please provide name' %}
+                        <p class="green white-text"> {{ message }} </p>
+                    {% elif message == 'Email must be a valid address' %}
+                    <p class="red white-text"> {{ message }} </p>
+                    {% endif %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endwith %}
+        <p> {{ age }}</p>
+        <p> {{ job }}</p>
+        <form action="/users" method="post">
+            <input type="hidden" name="id" value="{{session['counter']}}">
+            <input type="text" name="first_name" placeholder="First Name">
+            <input type="email" name="email" placeholder="name@email.com">
+            <button type="submit" value="send" name="button">Post Info!</button>
+        </form>
+        <a href="/clear">clear session</a>
+    </body>
+</html>

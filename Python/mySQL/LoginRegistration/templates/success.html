@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Success Page</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.css')}}">
+    </head>
+    <body>
+        <div id="container">
+            <div id="validEmail">
+                <p> The email address you entered ({{session['emailsdb']['email']}}) is validateEmail - Nicely Done...</p>
+            </div>
+            <!-- {{ all_emails }} -->
+            <h1>Email Addresses Entered:</h1>
+            <div>
+                {% for email in all_emails %}
+                <p id="email_display">id:{{email['id']}} - {{ email['email'] }} - {{ email['created_at'] }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <h2><a href="/">[ Back ]</a></h2>
+
+        <form action="/success/delete/<email_id>" method="POST">
+            <label for="email_id">DELETE EMAIL:<input type="text" name="email_id" placeholder="email_id"></label>
+            <input type="submit" value="Delete">
+
+        </form>
+    </body>
+</html>
